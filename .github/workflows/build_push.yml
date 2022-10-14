@@ -89,7 +89,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.0
         with:
           sketch-names: MarauderOTA.ino
-          arduino-board-fqbn: esp32:esp32:esp32s2
+          arduino-board-fqbn: esp32:esp32:esp32
           platform-url: https://github.com/espressif/arduino-esp32/releases/download/2.0.0-rc1/package_esp32_dev_index.json
           
       - name: Modify platform.txt
@@ -125,7 +125,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: esp32_marauder.flipper.bin
-          path: ./esp32_marauder/build/esp32.esp32.esp32s2/esp32_marauder.flipper.bin
+          path: ./esp32_marauder/build/esp32.esp32.esp32/esp32_marauder.flipper.bin
           retention-days: 5
           
       - name: Create Release
@@ -146,7 +146,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./esp32_marauder/build/esp32.esp32.esp32s2/esp32_marauder.flipper.bin
+          asset_path: ./esp32_marauder/build/esp32.esp32.esp32/esp32_marauder.flipper.bin
           asset_name: esp32_marauder.flipper.bin
           asset_content_type: application/bin
           
