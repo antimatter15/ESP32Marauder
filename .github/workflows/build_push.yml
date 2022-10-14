@@ -124,8 +124,8 @@ jobs:
       - name: 'Upload Flipper Artifact'
         uses: actions/upload-artifact@v3
         with:
-          name: esp32_marauder.flipper.bin
-          path: ./esp32_marauder/build/esp32.esp32.esp32/esp32_marauder.flipper.bin
+          name: esp32_marauder
+          path: ./esp32_marauder/build/esp32.esp32.esp32/
           retention-days: 5
           
       - name: Create Release
