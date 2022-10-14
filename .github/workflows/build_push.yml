@@ -118,7 +118,7 @@ jobs:
           
       - name: Rename Marauder Flipper bin
         run: |
-          mv ./esp32_marauder/build/esp32.esp32.esp32/esp32_marauder.ino.bin ./esp32_marauder/build/esp32.esp32.esp32s2/esp32_marauder.flipper.bin
+          mv ./esp32_marauder/build/esp32.esp32.esp32/esp32_marauder.ino.bin ./esp32_marauder/build/esp32.esp32.esp32/esp32_marauder.flipper.bin
           
 
       - name: 'Upload Flipper Artifact'
